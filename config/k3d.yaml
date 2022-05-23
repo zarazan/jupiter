@@ -1,0 +1,12 @@
+apiVersion: k3d.io/v1alpha4
+kind: Simple
+metadata:
+  name: jupiter
+servers: 2
+ports:
+  - port: 8000:8000
+registries:
+  create:
+    name: registry.localhost
+    host: "0.0.0.0"
+    hostPort: "5000"
